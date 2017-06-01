@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>counter</title>
+    <link rel="stylesheet" type="text/css" href="counter.css">
+</head>
+<body>
+	<center><p id="number">0</p></center>
+
+	<script>
+	var counter = 0;
+	var interval = setInterval(count, 1000);
+
+
+
+
+	function count() {
+		document.getElementById("number").innerHTML = counter; 
+		counter++;
+
+		if(counter == 101){
+		clearInterval(interval);
+		document.getElementById("number").style.color = "red";
+		}
+	}
+
+
+
+	</script>
+</body>
+</html>
